@@ -1,0 +1,44 @@
+<html lang="en" class="js" xmlns:fb="http://www.facebook.com/2008/fbml">
+	<!--<![endif]-->
+	<head>
+		<title>Gumball Machine</title>
+	</head>
+	<body class="country-us logged-in jquery" id="yelp_main_body" >
+		<div class="lang-en" id="wrap">
+			<span class="offscreen" id="page-content">&nbsp;</span>
+							<h2>GumBall Machines
+							</h2>
+							
+					<div id="searchPanelContainer" class="clearfix layout-block layout-a layout-border">
+							<div id="businessresults">
+							<ul>
+									<% if(result != null) { for(var i = 0;i < result.length;i++) { %> 
+									<li data-key="1" class="clearfix business-summary" data-component-bound="true">
+										<div class="war-businessresult businessresult">
+											<div class="leftcol">
+												<div >
+													<%=i+1%>.&nbsp;Serial # <a href="/getDetails/<%=result[i]._id%>">&nbsp;<%=result[i].serialNumber%> 
+													</a>
+												</div>
+											</div>
+											<div class="leftcol">
+												<div >
+													Model # :<%=result[i].modelNumber%>
+												</div>
+											</div>
+											<div class="leftcol">
+												<div align="center">
+													<%=result[i].countGumballs%> CountofGumballs
+												</div>
+											</div>
+										</div>
+									</li>
+								<%} } %>
+								</ul>
+								
+							</div>
+					</div>
+		</div>
+		 <a class="ybtn ybtn-primary header-button sign-up" id="header-sign-up" href="/">Add Gumball Machines</a>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+
+<html>
+<head>
+    <title>Gumball Machine</title>
+</head>
+
+<body>
+<h1 align="center">Gumball Machine</h1>
+
+<!-- FORM SECTION -->
+
+<p align="center"><img src="/images/gumball.jpg"  width="160" height="316"></p>
+<form action=
+                                 "/getDetails/<%=_id%>" class=
+                                 "" id=
+                                 "signup-form" method="post" name=
+                                 "signup-form">
+                                 <input type="hidden" value="<%=state%>" name="state">
+                                 <input type="hidden" value="<%=ts%>" name="ts">
+                                 <input type="hidden" value="<%=hash%>" name="hash">
+                                 <p align="center"><label class=
+                                    "placeholder-sub">Serial No &nbsp;</label>
+                                 <input id="serialNumber" name="serialNumber"
+                                    placeholder="Serial #" required="required"
+                                    type="text" readOnly value="<%=result.serialNumber%>" size="23"><br></p>
+                                 <p align="center"><label class=
+                                    "placeholder-sub">Model No.</label>   
+                                 <input id="modelNumber" name="modelNumber"
+                                    placeholder="Model #" readOnly required="required"
+                                    type="text" value="<%=result.modelNumber%>" size="23"><br></p>
+                                   <p align="center"> <label class=
+                                    "placeholder-sub">Count</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                 <input id="countGumballs" name="countGumballs"
+                                    placeholder="countGumballs" required=
+                                    "required" readOnly type="number" value="<%=result.countGumballs%>"></p>
+                                 <hr>
+                                 <h2 align="center"><%=Msg%></h2>
+                                 <hr>
+                                 <p align="center"><input id="insert" type="submit" value=
+                                    "Insert Quarter" name="event"> </p>
+                                 <p align="center"><input id="crank" type="submit" value=
+                                    "Turn Crank" name="event"></p> 
+                              </form>
+                              <a class="ybtn ybtn-primary header-button sign-up" id="header-sign-up" href="/list">List</a>
+</body>
+</html>
